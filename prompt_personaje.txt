@@ -1,0 +1,5 @@
+PROMPT DE EJEMPLO PARA GENERACIÓN (no indica que ya se haya generado un modelo)
+
+Crear un personaje humanoide estilizado de baja complejidad, de cuerpo completo, con proporciones amigables y fáciles de reconocer. Debe tener cabeza, torso, dos brazos y dos piernas claramente separados, pose de pie neutral en forma de A suave, simetría, volumen sencillo, malla limpia y apta para rigging básico. Usar materiales sencillos y pocos colores planos. Sin armas, accesorios complejos, escenario ni objetos en las manos. Mostrar el personaje centrado sobre fondo neutro. Priorizar topología ordenada, articulaciones fáciles de colocar y una escala consistente.
+
+IMPORTANTE: antes de entregar, reemplazar o complementar este texto con el prompt exacto que realmente se haya utilizado. Registrar cualquier cambio en el prompt y no afirmar que hubo generación hasta haberla realizado.
