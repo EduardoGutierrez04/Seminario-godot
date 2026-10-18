@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Level.tscn" id="1_level"]
+[ext_resource type="PackedScene" path="res://scenes/Character.tscn" id="2_character"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Level" parent="." instance=ExtResource("1_level")]
+
+[node name="Character" parent="." instance=ExtResource("2_character")]
+position = Vector3(0, 0.1, 6)

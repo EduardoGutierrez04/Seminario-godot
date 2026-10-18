@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_player"]
+
+[sub_resource type="CapsuleShape3D" id="PlayerShape"]
+radius = 0.4
+height = 2.3
+
+[sub_resource type="CapsuleMesh" id="BodyMesh"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="BodyMaterial"]
+albedo_color = Color(0.2, 0.55, 0.95, 1)
+roughness = 0.7
+
+[sub_resource type="SphereMesh" id="HeadMesh"]
+radius = 0.28
+height = 0.56
+
+[sub_resource type="StandardMaterial3D" id="HeadMaterial"]
+albedo_color = Color(0.96, 0.77, 0.56, 1)
+roughness = 0.8
+
+[node name="Character" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 1.15, 0)
+shape = SubResource("PlayerShape")
+
+[node name="VisualRoot" type="Node3D" parent="."]
+
+[node name="BodyPlaceholder" type="MeshInstance3D" parent="VisualRoot"]
+position = Vector3(0, 0.9, 0)
+mesh = SubResource("BodyMesh")
+surface_material_override/0 = SubResource("BodyMaterial")
+
+[node name="HeadPlaceholder" type="MeshInstance3D" parent="VisualRoot"]
+position = Vector3(0, 2.02, 0)
+mesh = SubResource("HeadMesh")
+surface_material_override/0 = SubResource("HeadMaterial")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+position = Vector3(0, 1.55, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+rotation = Vector3(-0.2, 0, 0)
+spring_length = 5.0
+margin = 0.2
+collision_mask = 1
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+current = true
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="StateLabel" type="Label" parent="HUD"]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 420.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 22
+text = "Estado: IDLE"
