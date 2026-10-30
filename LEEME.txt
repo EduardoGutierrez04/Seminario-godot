@@ -1,4 +1,0 @@
-Esta carpeta contiene una propuesta de prompt y una plantilla de bitácora.
-El prompt de ejemplo todavía no significa que se haya generado el modelo.
-Al realizar la generación, guarda aquí el prompt exacto enviado y registra los datos reales, incluidos fecha, herramienta y ajustes.
-Compara variantes con capturas. Si no fue necesaria una corrección, documenta las tres verificaciones descritas en bitacora_y_comparacion.md.
